@@ -1,0 +1,60 @@
+{
+  "actuated": [
+    "dof_thigh_motor",
+    "dof_shin_motor"
+  ],
+  "passive": [
+    "dof_servo_to_hip",
+    "dof_thigh",
+    "dof_right_horn",
+    "dof_knee"
+  ],
+  "closures": [
+    {
+      "name": "closing_left_horn",
+      "type": "revolute_z_as_point",
+      "a": {
+        "link": "hip_link_2_v8_1__body1",
+        "frame": "closing_left_horn_coupler",
+        "pos": [
+          -0.028331899999999997,
+          -0.013977700000000003,
+          0.004799999999999999
+        ]
+      },
+      "b": {
+        "link": "servo_horn_v35_1__body1",
+        "frame": "closing_left_horn_bellcrank",
+        "pos": [
+          -0.02520001859684503,
+          1.0131357165189814e-07,
+          -0.002000000000000137
+        ]
+      },
+      "gap_at_q0_mm": 0.0
+    },
+    {
+      "name": "closing_pushrod",
+      "type": "revolute_z_as_point",
+      "a": {
+        "link": "thigh_link_2_v10_1__body1",
+        "frame": "closing_pushrod_rod",
+        "pos": [
+          0.1130101165257708,
+          0.00710185988920229,
+          -0.0022004050152842954
+        ]
+      },
+      "b": {
+        "link": "shin_ankle_link_v33_1__body5",
+        "frame": "closing_pushrod_shin",
+        "pos": [
+          -0.026229944687483103,
+          -0.016613163025061585,
+          4.9339073755918714e-05
+        ]
+      },
+      "gap_at_q0_mm": 0.5494661045050975
+    }
+  ]
+}
